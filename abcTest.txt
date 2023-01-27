@@ -1,1 +1,7 @@
 %abc
+X:1
+L:1/4
+M:4/4
+G | GAG GAG | c2G EFG | A2F DEF | GEC C2E |
+G|GAG GAG|c2G EFG|A2F DEF|GEC C2E|
+
