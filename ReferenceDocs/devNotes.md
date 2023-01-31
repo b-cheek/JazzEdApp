@@ -39,3 +39,13 @@ I've been looking into how I want to design this app. Here's what I'm thinking:
 [Tutorial](https://blog.logrocket.com/building-pwa-vue/)
 
 I'm still thinking about using [PWABuilder](https://www.pwabuilder.com/), so I think I'll sleep on it (2:37)
+
+## 1/31/2023 10:24
+
+I've slept on it, and I should really just start working so I'm just going to get going on a demo using typescript
+
+### 11:12
+
+ok I thought a little longer and I was thinking about the backend and how I should consider a relational database for the experience.
+
+I've decided that using a document oriented database (Firebase Firestore) is gonna be the best move. I think I'm still gonna look into PWABuilder a little, but hoping to move on with writing a demo by tomorrow.
