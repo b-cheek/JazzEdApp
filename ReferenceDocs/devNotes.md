@@ -22,3 +22,20 @@ See [an example](https://paulrosen.github.io/abcjs/examples/basic-synth.html)
 * Note the `jazzchords` option for the `renderabc()` function
 * Note [this demo](https://paulrosen.github.io/abcjs/examples/modify-synth-input.html) that shows how to implement swing
 * You can just stack `'` and `,` to modify octaves without dealing with capitalization
+
+## 1/31/2021 0:54
+
+I've been looking into how I want to design this app. Here's what I'm thinking:
+
+* Progressive Web App
+* Vue
+* Nuxt?
+* TypeScript?
+* BootstrapVue
+* Firebase
+
+[Examples](https://hnpwa.com/) (HackerNews Clones)
+
+[Tutorial](https://blog.logrocket.com/building-pwa-vue/)
+
+I'm still thinking about using [PWABuilder](https://www.pwabuilder.com/), so I think I'll sleep on it (2:37)
