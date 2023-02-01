@@ -49,3 +49,25 @@ I've slept on it, and I should really just start working so I'm just going to ge
 ok I thought a little longer and I was thinking about the backend and how I should consider a relational database for the experience.
 
 I've decided that using a document oriented database (Firebase Firestore) is gonna be the best move. I think I'm still gonna look into PWABuilder a little, but hoping to move on with writing a demo by tomorrow.
+
+## 1/31/2023
+
+OK I don't think I'm gonna use PWABuilder, but I'll probably revisit the question when I get around to that step.
+
+Thinking more about coding functionality, I want to start documenting ideas for generating music and other aspects of the app itself.
+
+Here is a sort of outline for ideas for generation:
+
+- [ ] Exercises to play over chord changes
+    * Scales
+    * Arpeggios
+- [ ] Strict scalar eighth note lines
+    * Simple up and down 
+    * Barry Harris concepts for bebop lines
+- [ ] Add other  bebop tools
+    * Arpeggios
+    * Enclosures
+    * Approach tones
+    * Chromatics
+
+These are my current goals, but I'm going to put down some future ideas for more complex generation: 
