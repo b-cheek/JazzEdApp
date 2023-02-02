@@ -62,12 +62,12 @@ Here is a sort of outline for ideas for generation:
     * Scales
     * Arpeggios
 - [ ] Strict scalar eighth note lines
-    * Simple up and down 
+    * Simple up and down
     * Barry Harris concepts for bebop lines
-- [ ] Add other  bebop tools
+- [ ] Add other  bebop embellishments
     * Arpeggios
     * Enclosures
     * Approach tones
     * Chromatics
 
-These are my current goals, but I'm going to put down some future ideas for more complex generation: 
+These are my current goals, but I'm going to put down some future ideas for more complex generation:
