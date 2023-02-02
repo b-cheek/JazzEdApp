@@ -58,7 +58,7 @@ Thinking more about coding functionality, I want to start documenting ideas for 
 
 As for how I'm going to code this, I think javascript/typescript will work with the research I've done on the stack to use, as long as there are no major alterations to backend or API which should be covered by firebase.
 
-I think using the Tonal.js library with typescript will be the most effective solution that allows for simplicity and extensibility.
+I think using the [Tonal.js](https://github.com/tonaljs/tonal) library with typescript will be the most effective solution that allows for simplicity and extensibility.
 
 For actual generation itself, I may also make a separate document to put ideas in, but for now I'll put it in these notes.
 
@@ -69,7 +69,7 @@ Here is a sort of outline for ideas for generation:
     * Arpeggios
 - [ ] Strict scalar eighth note lines
     * Simple up and down
-    * Barry Harris concepts for bebop lines
+    * [Barry Harris concepts](https://www.youtube.com/watch?v=R-d4PmAXsms&list=PLZ12xkgS35S8ziqiOaN_5U3DLoZm_S0du&index=2) for bebop lines
 - [ ] Add other  bebop embellishments
     * Arpeggios
     * Enclosures
@@ -97,4 +97,3 @@ Motives should probably have at least 2 notes and have a max amount of notes (th
 Pitches need to be organized in a way so that Z knows which are going to be contextually tense or consonant.. like over a chord x in key y, Z would know how pitches need to be treated based on the offensiveness of the note if it's sustained (maybe?)
 
 We should consider having a database of motives it pulls from every now and then too- comprised of licks, existing popular melodies, quotes, and the likes
-
