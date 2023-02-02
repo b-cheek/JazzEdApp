@@ -50,11 +50,17 @@ ok I thought a little longer and I was thinking about the backend and how I shou
 
 I've decided that using a document oriented database (Firebase Firestore) is gonna be the best move. I think I'm still gonna look into PWABuilder a little, but hoping to move on with writing a demo by tomorrow.
 
-## 1/31/2023
+## 2/1/2023 19:23
 
 OK I don't think I'm gonna use PWABuilder, but I'll probably revisit the question when I get around to that step.
 
 Thinking more about coding functionality, I want to start documenting ideas for generating music and other aspects of the app itself.
+
+As for how I'm going to code this, I think javascript/typescript will work with the research I've done on the stack to use, as long as there are no major alterations to backend or API which should be covered by firebase.
+
+I think using the Tonal.js library with typescript will be the most effective solution that allows for simplicity and extensibility.
+
+For actual generation itself, I may also make a separate document to put ideas in, but for now I'll put it in these notes.
 
 Here is a sort of outline for ideas for generation:
 
@@ -71,3 +77,24 @@ Here is a sort of outline for ideas for generation:
     * Chromatics
 
 These are my current goals, but I'm going to put down some future ideas for more complex generation:
+
+### Melody Construction (Carlos)
+
+Z is a convenient placeholder name
+
+Z could decide on an amount of notes for motif using weights
+
+Weights may depend on other factors if those are decided first in algorithm- maybe algorithm can change the order of operations for a starting theme but it would probably be simpler to start with one thing.. at a glance, maybe the length of the first note or the amount of notes should determine other factors
+
+Once the algorithm decides on the amount of notes for a motive, maybe it can decide on a rhythm based on weights as well. It can also decide to add predetermined embellishments in certain spots- for example:
+
+If a motive ends up having an even number of repeating notes at the beginning, it can have a probability of adding a pickup note before it, (maybe the pitch of the note being decided by the function of the note after it)
+
+Whatever is most practical, pitches before rhythm or rhythm before pitches, Z's decisions about the other would be informed by the first.
+
+Motives should probably have at least 2 notes and have a max amount of notes (that arent embellishments) .. maybe 8?
+
+Pitches need to be organized in a way so that Z knows which are going to be contextually tense or consonant.. like over a chord x in key y, Z would know how pitches need to be treated based on the offensiveness of the note if it's sustained (maybe?)
+
+We should consider having a database of motives it pulls from every now and then too- comprised of licks, existing popular melodies, quotes, and the likes
+

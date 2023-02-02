@@ -27,5 +27,3 @@ Develop an algorithm which will output/transcribe harmonicallysound melodic mate
 * Software will be able to recognize relationships between chords and target chords and choose from a variety of possible outputs depending on previously used material in the same solo
 * Software will be able to assign weight to certain "devices" in line generation- device being defined as a recognizable motif or harmonic approach- so that the end-user can isolate/study that device. A finite set of devices will be pre-defined
 * Users will be able to create custom devices
-
--*Carlos Vizoso*
