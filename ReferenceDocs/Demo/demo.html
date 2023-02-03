@@ -9,22 +9,7 @@
 	<title>abcjs: Basic Demo</title>
 	<script src="abcjs-basic.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/tonal/browser/tonal.min.js"></script>
-	<script type="text/javascript">
-		var abc =
-`X: 1
-T: Demo
-K: F
-L: 1/8
-M: C
-Q: 120
-%%score
-|"G-7"z8|"C7"z8|"Fmaj7"z8|`
-
-		function load() {
-			ABCJS.renderAbc("paper", abc, {jazzchords: true});
-		}
-
-	</script>
+	<script src="generate.js" type="text/javascript"></script>
 </head>
 <body onload="load()">
   <div class="container">

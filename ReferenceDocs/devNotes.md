@@ -97,3 +97,9 @@ Motives should probably have at least 2 notes and have a max amount of notes (th
 Pitches need to be organized in a way so that Z knows which are going to be contextually tense or consonant.. like over a chord x in key y, Z would know how pitches need to be treated based on the offensiveness of the note if it's sustained (maybe?)
 
 We should consider having a database of motives it pulls from every now and then too- comprised of licks, existing popular melodies, quotes, and the likes
+
+## 2/3/2023 18:01
+
+I am starting to work on the actual functionality of the demo; I created a dedicated js file for the generation instead of a script tag. I used jsdelivr to get Tonaljs, but I'll probably install modules individually for the final project.
+
+All I did today was write up an F blues in the abc string, and create the Tonal chord objects that will be used as reference to generate the melody. The only problem I need to figure out with that is **how I want to indicate the duration of each chord symbol**. For now that's not a problem kind of because each chord lasts one measure in my chord array, but this is something that should be resolved in the demo.
