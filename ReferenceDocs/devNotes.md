@@ -65,16 +65,16 @@ For actual generation itself, I may also make a separate document to put ideas i
 Here is a sort of outline for ideas for generation:
 
 - [ ] Exercises to play over chord changes
-    * Scales
-    * Arpeggios
+  * Scales
+  * Arpeggios
 - [ ] Strict scalar eighth note lines
-    * Simple up and down
-    * [Barry Harris concepts](https://www.youtube.com/watch?v=R-d4PmAXsms&list=PLZ12xkgS35S8ziqiOaN_5U3DLoZm_S0du&index=2) for bebop lines
+  * Simple up and down
+  * [Barry Harris concepts](https://www.youtube.com/watch?v=R-d4PmAXsms&list=PLZ12xkgS35S8ziqiOaN_5U3DLoZm_S0du&index=2) for bebop lines
 - [ ] Add other  bebop embellishments
-    * Arpeggios
-    * Enclosures
-    * Approach tones
-    * Chromatics
+  * Arpeggios
+  * Enclosures
+  * Approach tones
+  * Chromatics
 
 These are my current goals, but I'm going to put down some future ideas for more complex generation:
 
@@ -103,3 +103,42 @@ We should consider having a database of motives it pulls from every now and then
 I am starting to work on the actual functionality of the demo; I created a dedicated js file for the generation instead of a script tag. I used jsdelivr to get Tonaljs, but I'll probably install modules individually for the final project.
 
 All I did today was write up an F blues in the abc string, and create the Tonal chord objects that will be used as reference to generate the melody. The only problem I need to figure out with that is **how I want to indicate the duration of each chord symbol**. For now that's not a problem kind of because each chord lasts one measure in my chord array, but this is something that should be resolved in the demo.
+
+## 2/4/2023 21:50
+
+I'm thinking that the solution to my problem before is to create a class that can store a duration along with either a Tonal chord/note. For now I will generate notes for each chord, but for more complex generation I should probably analyze chords first to consider the future while generating.
+
+### 23:27
+
+So I finished writing code to generate a basic arpeggio for any chord. There are a lot of things that will only work for the demo; here is a list of things that would cause this code to break (for future reference):
+
+* There is more than one chord in a measure
+* A chord has more than 4 notes
+* Hardcoded features:
+  * 12 bars
+  * line breaks every 4 bars
+  * Hack to hide key signature after first line
+  * Different meters
+
+This is alright though because I will have to write more complex code that takes care of these problems automatically for many cases (e.g. line wrapping).
+
+#### Line break formatting issue
+
+I spent much of my time trying to figure out how I could format line breaks like most jazz music, where new lines start with just a bar, and no clef or key signature. It seems that most music written in abc will have the clef and key on every line. I don't like how this looks, so I opted for the best current workaround where I remove the key after the first line and have no bar at the beginning of each new line (if I put a bar then the lines of the staff extend slightly to its left, which looks worse in my opinion).
+
+Worst case scenario I contribute to the source code to make this possible, but I think I may be able to do an easier workaround where I move each of those new barlines slightly to the left. Best case scenario, Carlos would prefer a layout that is possible within abcjs, and I can change it;
+
+Things I think I should ask Carlos:
+
+* Preferred chord symbols or no? If so which are preferred?
+* How should new lines look?
+  * Clef?
+  * Key?
+* If chords are entered manually, what would be best?
+* Any specific exercises I should add other than arpeggios and scales?
+
+I'm calling it for the night, over the next few days I would like to add:
+
+* Scale exercises
+* A button to "generate" exercises
+* Maybe a button/dropdown that allows you to choose between scales and arpeggios
