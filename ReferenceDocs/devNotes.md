@@ -154,3 +154,25 @@ This allows me to easily change the displayed chords for demonstration purposes.
 I originally wanted to have the text input be on the actual page, but I deemed that to be difficult and unnecessary at this stage.
 
 The only problem I currently need to fix is that accidentals are always written, even when within the key. I assume there is an easy solution for this, but I'm done for the night, so I won't create a GitHub issue.
+
+## 2/6/2023 14:48
+
+After sleeping on it, I determined that it is best to default to the key of C and write out all accidentals for the demo.
+
+I think this is a fair choice because the purpose of the demo is to output the exercises for each of the chords, which should be independent of any form of harmonic analysis and thus key.
+
+I commmented out the hack to remove the key signature because it is no longer necessary, but I want to remember how I addressed it for future reference.
+
+### 16:09
+
+I added functionality for the scales exercise, and hardcoded the scale vs chord option.
+
+I also hardcoded an input containing the 5 basic 7 chords (maj7 -7, 7, -7b5, and dim7) for 21 note names (A-G, with sharp and flat versions). Note that doing this showed that **triple flat notes (and presumably triple sharp) are not displayed correctly**
+
+I will leave this for now, because it only applies to Cbdim7 and Fbdim7, I would rather do an error message telling them to put B or E. I'll have to look into whether these chords should genuinely appear. The only other thing I'd like to complete before showing the demo is **browser buttons to generate each option**
+
+#### Tonal problems
+
+I'm starting to dislike the way Tonal js does things; I wish the modules interacted with eachother more effectively. For example, it would be nice if `chord.notes` was an array of `Note` objects, instead of strings.
+
+I think the scale of this may actually be small enough to write a basic library myself. I am going to put some thought into figuring that out after I show Carlos the demo.
