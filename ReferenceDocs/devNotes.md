@@ -176,3 +176,32 @@ I will leave this for now, because it only applies to Cbdim7 and Fbdim7, I would
 I'm starting to dislike the way Tonal js does things; I wish the modules interacted with eachother more effectively. For example, it would be nice if `chord.notes` was an array of `Note` objects, instead of strings.
 
 I think the scale of this may actually be small enough to write a basic library myself. I am going to put some thought into figuring that out after I show Carlos the demo.
+
+## 2/8/2023
+
+### Generation ideas
+
+Thought of another generation concept:
+
+* Randomly generate a melodic contour
+  * A melodic contour is a graph of maybe three to four points representing pitch with relation to time
+* Assign these points to strong notes:
+  * Guide tones
+  * Chord tones
+  * Color tones?
+* Connect these notes in a logical way depending on the time between them, aided using:
+  * Chromatics
+  * Embellishments
+
+I think this should be one of many ways to generate a line, others being through repetition or leaning on a specific idea/gimmick. For example:
+
+* Repetition of a pattern over a
+  * Scale
+  * Chord
+  * conflicting time (for example repeating a figure that lasts 5 eighth notes in a 4/4 meter)
+  * Note the idea of leaving the pitches of the repeated idea the same so the function changes with a new chord
+* Specific idea like
+  * Long high note
+  * Recognizable lick
+  
+I think these ideas could pair well with motivic development that may be harder to implement. A final closing idea is that the idea of a contour could be used in the context of an entire solo.
