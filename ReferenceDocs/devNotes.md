@@ -205,3 +205,17 @@ I think this should be one of many ways to generate a line, others being through
   * Recognizable lick
   
 I think these ideas could pair well with motivic development that may be harder to implement. A final closing idea is that the idea of a contour could be used in the context of an entire solo.
+
+### 2:38
+
+I added the buttons to control generation, and I generate rests by default. Note, **Having DE at the beginning with *tr* above means that an invisible character (usually tab) is being read as abc**.
+
+Tomorrow I want to do some styling and then make this demo officially complete, I'll try and make it a release on github. Will go into more detail then.
+
+Also so I don't forget, some other questions I want to ask Carlos:
+
+* Does the user input key signature?
+* Repeats allowed?
+  * Would generation be without a repeat presumably?
+* Cap on number of measures?
+* Best way for user to manually input chord symbols?

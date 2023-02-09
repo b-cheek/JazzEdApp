@@ -5,6 +5,7 @@ var input = "Amaj7 Dm7 G7 Cm7b5 Fdim7 Bmaj7 Em7 A7 Dm7b5 Gdim7 Cmaj7 Fm7 B7 Em7b
 var chords = input.split(" ").map(chord => 
     Tonal.Chord.getChord(Tonal.Chord.get(chord).aliases[0], Tonal.Chord.get(chord).tonic + "4"));
 
+
 notes = 
 `X: 1
 T: Demo
@@ -15,54 +16,14 @@ Q: 120
 %%score
 |`;
 
-let exerciseType="Scale";
+
 let barOverflow = 0;
-// let fixKey = true;
-
-if (exerciseType == "Chord") notes += " [L:1/4] ";
-
-for (const chord of chords) {
-    notes += `"${chord.symbol}"`;
-    if (exerciseType=="Chord") for (const note of chord.notes) 
-        notes += Tonal.AbcNotation.scientificToAbcNotation(note);
-    else if (exerciseType=="Scale") {
-        let scaleChoice;
-        switch(chord.aliases[0]) {
-            case 'maj7':
-                scaleChoice = "major";
-                break;
-            case 'm7':
-                scaleChoice = "dorian";
-                break;
-            case '7':
-                scaleChoice = "mixolydian";
-                break;
-            case 'm7b5':
-                scaleChoice = "locrian";
-                break;
-            case 'dim7':
-                scaleChoice = "diminished";
-                break;
-        }
-        let beamBreak = 0;
-        for (const note of Tonal.Scale.get(chord.tonic + " " + scaleChoice).notes) {
-            notes += Tonal.AbcNotation.scientificToAbcNotation(note);
-            beamBreak++;
-            if (beamBreak == 4) notes += " "; //Proper beaming, will make automatic outside of demo
-        }
-        if (scaleChoice != "diminished") notes += "2"; // Making the last note twice as long so the scale fits the length of the measure
-        // Note that the dim scale is an 8 note scale, so NA
-    }
-
-    notes += "|";
+for (let chord of input.split(" ")) {
+    notes += `"${chord}"z8|`;
     barOverflow++;
     if (barOverflow%4==0) {
         barOverflow = 0;
-        // if (fixKey) {
-        //     fixKey = false;
-        //     notes +="\nK:none"
-        // }
-        notes += "\n"
+        notes += '\n';
     }
 }
 
@@ -70,5 +31,132 @@ for (const chord of chords) {
 // for (let i of notes.split("\n")) console.log(i);
 
 function load() {
-    ABCJS.renderAbc("paper", notes, {jazzchords: true, initialClef: true, initialKey: true, add_classes:true, hideKeySignature: true});
+    document.getElementById("ChordButton").addEventListener("click", function() {
+        notes = 
+`X: 1
+T: Demo
+K: none
+L: 1/8
+M: C
+Q: 120
+%%score
+|`;
+
+        let exerciseType="Chord";
+        let barOverflow = 0;
+        // let fixKey = true;
+
+        if (exerciseType == "Chord") notes += " [L:1/4] ";
+
+        for (const chord of chords) {
+            notes += `"${chord.symbol}"`;
+            if (exerciseType=="Chord") for (const note of chord.notes) 
+                notes += Tonal.AbcNotation.scientificToAbcNotation(note);
+            else if (exerciseType=="Scale") {
+                let scaleChoice;
+                switch(chord.aliases[0]) {
+                    case 'maj7':
+                        scaleChoice = "major";
+                        break;
+                    case 'm7':
+                        scaleChoice = "dorian";
+                        break;
+                    case '7':
+                        scaleChoice = "mixolydian";
+                        break;
+                    case 'm7b5':
+                        scaleChoice = "locrian";
+                        break;
+                    case 'dim7':
+                        scaleChoice = "diminished";
+                        break;
+                }
+                let beamBreak = 0;
+                for (const note of Tonal.Scale.get(chord.tonic + " " + scaleChoice).notes) {
+                    notes += Tonal.AbcNotation.scientificToAbcNotation(note);
+                    beamBreak++;
+                    if (beamBreak == 4) notes += " "; //Proper beaming, will make automatic outside of demo
+                }
+                if (scaleChoice != "diminished") notes += "2"; // Making the last note twice as long so the scale fits the length of the measure
+                // Note that the dim scale is an 8 note scale, so NA
+            }
+
+            notes += "|";
+            barOverflow++;
+            if (barOverflow%4==0) {
+                barOverflow = 0;
+                // if (fixKey) {
+                //     fixKey = false;
+                //     notes +="\nK:none"
+                // }
+                notes += "\n"
+            }
+        }
+        ABCJS.renderAbc("paper", notes, {jazzchords: true, initialClef: true, add_classes:true, hideKeySignature: true});
+    });
+    document.getElementById("ScaleButton").addEventListener("click", function() {
+        notes = 
+`X: 1
+T: Demo
+K: none
+L: 1/8
+M: C
+Q: 120
+%%score
+|`;
+
+        let exerciseType="Scale";
+        let barOverflow = 0;
+        // let fixKey = true;
+
+        if (exerciseType == "Chord") notes += " [L:1/4] ";
+
+        for (const chord of chords) {
+            notes += `"${chord.symbol}"`;
+            if (exerciseType=="Chord") for (const note of chord.notes) 
+                notes += Tonal.AbcNotation.scientificToAbcNotation(note);
+            else if (exerciseType=="Scale") {
+                let scaleChoice;
+                switch(chord.aliases[0]) {
+                    case 'maj7':
+                        scaleChoice = "major";
+                        break;
+                    case 'm7':
+                        scaleChoice = "dorian";
+                        break;
+                    case '7':
+                        scaleChoice = "mixolydian";
+                        break;
+                    case 'm7b5':
+                        scaleChoice = "locrian";
+                        break;
+                    case 'dim7':
+                        scaleChoice = "diminished";
+                        break;
+                }
+                let beamBreak = 0;
+                for (const note of Tonal.Scale.get(chord.tonic + " " + scaleChoice).notes) {
+                    notes += Tonal.AbcNotation.scientificToAbcNotation(note);
+                    beamBreak++;
+                    if (beamBreak == 4) notes += " "; //Proper beaming, will make automatic outside of demo
+                }
+                if (scaleChoice != "diminished") notes += "2"; // Making the last note twice as long so the scale fits the length of the measure
+                // Note that the dim scale is an 8 note scale, so NA
+            }
+
+            notes += "|";
+            barOverflow++;
+            if (barOverflow%4==0) {
+                barOverflow = 0;
+                // if (fixKey) {
+                //     fixKey = false;
+                //     notes +="\nK:none"
+                // }
+                notes += "\n"
+            }
+        }
+        ABCJS.renderAbc("paper", notes, {jazzchords: true, initialClef: true, add_classes:true, hideKeySignature: true});
+
+    });
+    ABCJS.renderAbc("paper", notes, {jazzchords: true, initialClef: true, add_classes:true, hideKeySignature: true});
 }
