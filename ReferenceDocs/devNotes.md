@@ -219,3 +219,15 @@ Also so I don't forget, some other questions I want to ask Carlos:
   * Would generation be without a repeat presumably?
 * Cap on number of measures?
 * Best way for user to manually input chord symbols?
+
+## 2/12/2023 2:39
+
+Just had a pretty random thought that I wanted to write down in here.
+
+For a hypothetical tonaljs replacement that I might write, a good thought would be to have some sort of structure linking chords and scales in an exact way.
+
+For example, the V chord in major is dominant, and the V scale (mixolydian) is the matching scale. I haven't thought too deep into this, like how dorian and aeolian are both linked to minor 7th chords, but I think it would be a good idea. 
+
+I decided to write this down when I thought about how I could do this for the four 7 note (non-symmetrical) scales: major, harmonic major, harmonic minor, and (ascending) melodic minor (AKA minor major).
+
+I will have to look into some of those chord scale relationships, but this could be a useful idea for very simple generation. The only flaw/simplification is that a ii and V chord both are just modes of the same I major scale. Will put more thought into this later.
