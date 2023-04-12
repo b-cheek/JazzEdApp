@@ -231,3 +231,15 @@ For example, the V chord in major is dominant, and the V scale (mixolydian) is t
 I decided to write this down when I thought about how I could do this for the four 7 note (non-symmetrical) scales: major, harmonic major, harmonic minor, and (ascending) melodic minor (AKA minor major).
 
 I will have to look into some of those chord scale relationships, but this could be a useful idea for very simple generation. The only flaw/simplification is that a ii and V chord both are just modes of the same I major scale. Will put more thought into this later.
+
+## 4/12/2023 4:48
+
+Been a while, just got the create Vue app PWA up, will start learning a bit more about the development process, generally following [this tutorial](https://blog.logrocket.com/building-pwa-vue/)
+
+Note that there seems to be some strange stuff with the version control, a lot of files are displayed as deleted.
+
+Note that the full command to build and serve is 
+
+```CLI
+npm run build ; npx http-server dist
+```
