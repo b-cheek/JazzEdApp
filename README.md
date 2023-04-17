@@ -1,5 +1,25 @@
 # Description
 
+## 1.0 Goals
+
+* Software will allow changes to be made to input chord progressions
+
+* Software will allow for certain notes to be disabled
+
+* Software will impose harmonic extensions (basic)
+
+* Software will employ good voice-leading techniques
+
+* Software will provide exercises for chord progressions such as: root position arpeggios for each chord; arpeggios with varying directions for each chord that use proper voice leading from chord to chord; completely stepwise and uni-directional lines which employ good voice leading and change direction only at specified ranges
+
+* Software will have customizable preset ranges for different instruments such as tenor saxophone and trombone
+
+* Software will be able to transpose inputs or outputs
+
+* Software will be able to generate images of output material to be exported.
+
+* Software will have capability to save/load chord progressions/ exercises
+
 ## Primary Objective
 
 Develop an algorithm which will output/transcribe harmonicallysound melodic material given a defined chord progression over a defined amount of measures.

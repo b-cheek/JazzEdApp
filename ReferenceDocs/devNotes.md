@@ -243,3 +243,11 @@ Note that the full command to build and serve is
 ```CLI
 npm run build ; npx http-server dist
 ```
+
+## 4/17/2023 13:45
+
+Just looked over the 1.0 goals and went through a vue tutorial, thinking about some of the implementation.
+
+Carlos said that the choosing to eliminate certain notes isn't super important so that's good.
+
+Only thing now is that I'm just not so sure of exactly what he wants aside from exercises.
