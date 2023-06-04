@@ -251,3 +251,11 @@ Just looked over the 1.0 goals and went through a vue tutorial, thinking about s
 Carlos said that the choosing to eliminate certain notes isn't super important so that's good.
 
 Only thing now is that I'm just not so sure of exactly what he wants aside from exercises.
+
+## 6/3/2023 23:02
+
+Need to start working on this. Here are some notes from a meeting:
+
+* no repeats
+* arpeggiate up and down, lead to nearest note in other arpeggio
+* stepwise, chord scale
