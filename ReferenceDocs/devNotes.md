@@ -238,7 +238,7 @@ Been a while, just got the create Vue app PWA up, will start learning a bit more
 
 Note that there seems to be some strange stuff with the version control, a lot of files are displayed as deleted.
 
-Note that the full command to build and serve is 
+Note that the full command to build and serve is
 
 ```CLI
 npm run build ; npx http-server dist
